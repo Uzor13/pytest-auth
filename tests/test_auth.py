@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
+import pytest
 
+from firstuseauthenticator import FirstUseAuthenticator
 
 def test_bar_fixture(testdir):
     """Make sure that pytest accepts our fixture."""
@@ -62,3 +64,11 @@ def test_hello_ini_setting(testdir):
 
     # make sure that that we get a '0' exit code for the testsuite
     assert result.ret == 0
+
+@pytest.fixture
+def test_firstauthenticator():
+    auth = FirstUseAuthenticator()
+
+    # allow passwords with any length
+    auth.min_password_length = 10
+    return auth
