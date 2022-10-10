@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from firstuseauthenticator import FirstUseAuthenticator
 import pytest
 
 
@@ -19,3 +19,11 @@ def pytest_addoption(parser):
 @pytest.fixture
 def bar(request):
     return request.config.option.dest_foo
+
+@pytest.fixture
+def test_firstauthenticator():
+    auth = FirstUseAuthenticator()
+
+    # allow passwords with any length
+    auth.min_password_length = 10
+    return auth
