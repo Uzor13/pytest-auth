@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-auth',
-    version='1',
+    version='1.0',
     author='Uzochukwu Precious',
     author_email='p.uzor99@gmail.com',
     maintainer='Uzochukwu Precious',
