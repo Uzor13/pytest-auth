@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-auth',
-    version='0.1.0',
+    version='1',
     author='Uzochukwu Precious',
     author_email='p.uzor99@gmail.com',
     maintainer='Uzochukwu Precious',
@@ -44,7 +44,7 @@ setup(
     ],
     entry_points={
         'pytest11': [
-            'auth = pytest_auth',
+            'pytest_auth = pytest_auth',
         ],
     },
 )
